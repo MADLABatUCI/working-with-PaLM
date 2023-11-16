@@ -60,7 +60,7 @@ $(document).ready(function (){
         /*
             Redirect participants back to prolific after the study.
         */
-    window.location.replace("https://app.prolific.com/submissions/complete?cc=C18XJC6Z");
+    window.location.replace("https://app.prolific.com/submissions/complete?cc=C13CL3ZR");
     }
 
     function submitFeedback() {
