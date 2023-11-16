@@ -1,4 +1,4 @@
-# Calibrating User Confidence in GPT
+# Working with ChatGPT
 
 Repository for online web experiments for the "Calibrating User Confidence in GPT" project
 
