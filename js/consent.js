@@ -56,7 +56,7 @@ Users of ChatGPT often report that the system is overconfident in its answers an
         DEFAULT:
             30 minutes
 */
-var TIME_COMMITMENT = "60 minutes";
+var TIME_COMMITMENT = "40-50 minutes";
 
 /*
     Benefits and Risks
@@ -101,7 +101,7 @@ var ELIGIBILITY_REQUIREMENTS = `
         DEFAULT:
             $5.00
 */
-var COMPENSATION = "$12.00";
+var COMPENSATION = "$8.00";
 
 /*
     Recruitment Service
