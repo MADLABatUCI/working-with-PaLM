@@ -63,7 +63,9 @@ $(document).ready(function (){
         //   Redirect URL for first study (first 20 participants)
         //window.location.replace("https://app.prolific.com/submissions/complete?cc=C13CL3ZR");
         //  Redirect URL for second study (second 20 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
+        //window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
+        //  Redirect URL for Experiment 02 (explanationstyleN) (pilot 05 participants)
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C10HG17R");
     }
 
     function submitFeedback() {
