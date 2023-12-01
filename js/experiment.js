@@ -219,9 +219,11 @@ $(document).ready(function (){
     //  Shuffle trials for this experiment!
     shuffle(participantTrials, explanationTrials);
     expTrialList = participantTrials.slice(0, TOTAL_TRIALS).map(i => trialQuestions[i]);
-    console.log("Trials\n", participantTrials);
-    console.log("Explanation\n", explanationTrials);
-
+    if (DEBUG_EXPERIMENT_CONCURRENT){
+        console.log("Trials\n", participantTrials);
+        console.log("Explanation\n", explanationTrials);
+    };
+    
 
     /******************************************************************************
         FUNCTIONALITY
