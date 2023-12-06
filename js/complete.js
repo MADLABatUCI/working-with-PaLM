@@ -64,8 +64,10 @@ $(document).ready(function (){
         //window.location.replace("https://app.prolific.com/submissions/complete?cc=C13CL3ZR");
         //  Redirect URL for second study (second 20 participants)
         //window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
-        //  Redirect URL for Experiment 02 (explanationstyleN) (pilot 05 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=C10HG17R");
+        //  Redirect URL for Experiment 02 (explanationstyleN) (pilot 10 participants)
+        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C10HG17R");
+        //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v12) (pilot 10 participants)
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C1DYD2KB");
     }
 
     function submitFeedback() {
