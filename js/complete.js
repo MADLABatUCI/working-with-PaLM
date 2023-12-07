@@ -69,7 +69,9 @@ $(document).ready(function (){
         //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v12) (pilot 10 participants)
         //window.location.replace("https://app.prolific.com/submissions/complete?cc=C1DYD2KB");
         //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v14) (pilot 10 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=C1E3B53O");
+        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C1E3B53O");
+        //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v15) (pilot 10 participants)
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C1AJUXDE");
     }
 
     function submitFeedback() {
