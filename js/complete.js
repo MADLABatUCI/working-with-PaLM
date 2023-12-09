@@ -60,18 +60,9 @@ $(document).ready(function (){
         /*
             Redirect participants back to prolific after the study.
         */
-        //   Redirect URL for first study (first 20 participants)
-        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C13CL3ZR");
-        //  Redirect URL for second study (second 20 participants)
-        //window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
-        //  Redirect URL for Experiment 02 (explanationstyleN) (pilot 10 participants)
-        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C10HG17R");
-        //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v12) (pilot 10 participants)
-        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C1DYD2KB");
-        //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v14) (pilot 10 participants)
-        //window.location.replace("https://app.prolific.com/submissions/complete?cc=C1E3B53O");
-        //  Redirect URL for Experiment 02 (explanationstyleN with eplanations file v15) (pilot 10 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=C1AJUXDE");
+        //  Redirect URL for Experiment 03 (explanationstyleN) (pilot 10 participants)
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C9R19NT2");
+        
     }
 
     function submitFeedback() {

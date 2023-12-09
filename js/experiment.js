@@ -36,8 +36,8 @@ import {
 //      Task Information
 var CURRENT_TASK                = 1;
 var TOTAL_TRIALS                = 40;
-var EXPLANATION_OPTIONS         = 6;
-var DATA_FILE                   = "data/explanations15_42_350_Dec07_withAnsPrefix.json";
+var EXPLANATION_OPTIONS         = 3;
+var DATA_FILE                   = "data/explanations16_42_350_Dec08_withAns.json";
 
 //      Database Path
 var TRIAL_DB_PATH               = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/trialData';
