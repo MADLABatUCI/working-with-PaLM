@@ -63,7 +63,9 @@ $(document).ready(function (){
         //   Redirect URL for first study (first 20 participants)
         //window.location.replace("https://app.prolific.com/submissions/complete?cc=C13CL3ZR");
         //  Redirect URL for second study (second 20 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
+        //window.location.replace("https://app.prolific.com/submissions/complete?cc=CNTZC8D5");
+        //  Redirect URL for second study (New baseline file 40 participants total, batches of 10)
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C1H7DFFW");
     }
 
     function submitFeedback() {

@@ -36,7 +36,7 @@ import {
 //      Task Information
 var CURRENT_TASK                = 1;
 var TOTAL_TRIALS                = 40;
-var DATA_FILE                   = "data/baseline_350_Nov13_withAnsPrefix.json";
+var DATA_FILE                   = "data/explanations17_baseline_350_Dec08_withAns.json";
 
 //      Database Path
 var TRIAL_DB_PATH               = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/trialData';
@@ -216,7 +216,7 @@ $(document).ready(function (){
         $('#participant-trial-option-text-D').text(trialList[trial].D); 
 
         // Update GPT Explanation
-        $('#task-gpt-text-box-explanation-text').html(trialList[trial].Explanation_with_prefix);
+        $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle1']);
 
         // Initialize all timers
         TRIAL_START_TIME = new Date();
@@ -224,6 +224,7 @@ $(document).ready(function (){
         if (DEBUG_EXPERIMENT_CONCURRENT) {
             console.log(' Current Trial Number =', trial);
             console.log(' Current Trial Data   =', trialList[trial]);
+            console.log(' Current Explanation  =', trialList[trial]['explanationstyle1']);
         }
     };
 
