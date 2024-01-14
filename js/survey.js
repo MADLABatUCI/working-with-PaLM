@@ -33,16 +33,16 @@ var DEBUG_SURVEY                    = DEBUG;
 
 //      Survey Information
 var TOPIC_ABILITY_DICT = {
-    "Anatomy"                       : null,
-    "Global Facts"                  : null,
-    "High School Chemistry"         : null,
-    "High School Macroeconomics"    : null,
-    "High School Physics"           : null,
-    "High School World Histroy"     : null,
-    "Machine Learning"              : null,
-    "Philosophy"                    : null,
-    "Professional Psychology"       : null,
-    "Public Relations"              : null
+    "Business Ethics"           : null,
+    "Clinical Knowledge"        : null,
+    "College Computer Science"  : null,
+    "Econometrics"              : null,
+    "Electrical Engineering"    : null,
+    "High School Physics"       : null,
+    "Machine Learning"          : null,
+    "Prehistory"                : null,
+    "Professional Accounting"   : null,
+    "Professional Law"          : null
 };
 var TOPICS_RANKED                   = 0;
 
@@ -128,6 +128,10 @@ $(document).ready(function (){
         writeRealtimeDatabase(
             SURVEY_DB_PATH + "/metadata/surveyTotalTime",
             SURVEY_END_TIME - SURVEY_START_TIME
+        );
+        writeRealtimeDatabase(
+            SURVEY_DB_PATH + "/metadata/surveyCompleted",
+            true
         );
         
         // Hide Instructions

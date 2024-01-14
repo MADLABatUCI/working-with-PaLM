@@ -36,12 +36,12 @@ conducted at the end of the experiment.
                     <!-- Update trial question here -->
                     <h5 class="trial-task trial-question trial-information" id="survey-task">
                         Suppose you are now given 100 questions for each of the 10 topics. We want you to estimate the percentage of questions
-                        that you would answer correctly <b>on your own</b> (without the aid of <i>ChatGPT</i>). This means that if you have
+                        that you would answer correctly <b>on your own</b> (without the aid of <i>PaLM</i>). This means that if you have
                         absolutely no idea and are guessing for all 100 questions, your predicted score would be 25% (Guessing/Chance). However,
                         if you are an expert and predict that you will answer all 100 questions correctly, then your score would be 100%.
                         <br />
                         <br />
-                        For each of the topics, what percentage of questions do you believe you would answer correctly <b>on your own</b> (without any help from <i>ChatGPT</i>)?
+                        For each of the topics, what percentage of questions do you believe you would answer correctly <b>on your own</b> (without any help from <i>PaLM</i>)?
                     </h5>
                     
                 </div>
@@ -113,114 +113,140 @@ conducted at the end of the experiment.
                     <!-- Topic 01 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            Anatomy
+                            Business Ethics
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic01-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="Anatomy" value="25"></li>
-                                <li><input type="radio" name="Anatomy" value="30"></li>
-                                <li><input type="radio" name="Anatomy" value="35"></li>
-                                <li><input type="radio" name="Anatomy" value="40"></li>
-                                <li><input type="radio" name="Anatomy" value="45"></li>
-                                <li><input type="radio" name="Anatomy" value="50"></li>
-                                <li><input type="radio" name="Anatomy" value="55"></li>
-                                <li><input type="radio" name="Anatomy" value="60"></li>
-                                <li><input type="radio" name="Anatomy" value="65"></li>
-                                <li><input type="radio" name="Anatomy" value="70"></li>
-                                <li><input type="radio" name="Anatomy" value="75"></li>
-                                <li><input type="radio" name="Anatomy" value="80"></li>
-                                <li><input type="radio" name="Anatomy" value="85"></li>
-                                <li><input type="radio" name="Anatomy" value="90"></li>
-                                <li><input type="radio" name="Anatomy" value="95"></li>
-                                <li><input type="radio" name="Anatomy" value="100"></li>
+                                <li><input type="radio" name="Business Ethics" value="25"></li>
+                                <li><input type="radio" name="Business Ethics" value="30"></li>
+                                <li><input type="radio" name="Business Ethics" value="35"></li>
+                                <li><input type="radio" name="Business Ethics" value="40"></li>
+                                <li><input type="radio" name="Business Ethics" value="45"></li>
+                                <li><input type="radio" name="Business Ethics" value="50"></li>
+                                <li><input type="radio" name="Business Ethics" value="55"></li>
+                                <li><input type="radio" name="Business Ethics" value="60"></li>
+                                <li><input type="radio" name="Business Ethics" value="65"></li>
+                                <li><input type="radio" name="Business Ethics" value="70"></li>
+                                <li><input type="radio" name="Business Ethics" value="75"></li>
+                                <li><input type="radio" name="Business Ethics" value="80"></li>
+                                <li><input type="radio" name="Business Ethics" value="85"></li>
+                                <li><input type="radio" name="Business Ethics" value="90"></li>
+                                <li><input type="radio" name="Business Ethics" value="95"></li>
+                                <li><input type="radio" name="Business Ethics" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 02 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            Global Facts
+                            Clinical Knowledge
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic02-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="Global Facts" value="25"></li>
-                                <li><input type="radio" name="Global Facts" value="30"></li>
-                                <li><input type="radio" name="Global Facts" value="35"></li>
-                                <li><input type="radio" name="Global Facts" value="40"></li>
-                                <li><input type="radio" name="Global Facts" value="45"></li>
-                                <li><input type="radio" name="Global Facts" value="50"></li>
-                                <li><input type="radio" name="Global Facts" value="55"></li>
-                                <li><input type="radio" name="Global Facts" value="60"></li>
-                                <li><input type="radio" name="Global Facts" value="65"></li>
-                                <li><input type="radio" name="Global Facts" value="70"></li>
-                                <li><input type="radio" name="Global Facts" value="75"></li>
-                                <li><input type="radio" name="Global Facts" value="80"></li>
-                                <li><input type="radio" name="Global Facts" value="85"></li>
-                                <li><input type="radio" name="Global Facts" value="90"></li>
-                                <li><input type="radio" name="Global Facts" value="95"></li>
-                                <li><input type="radio" name="Global Facts" value="100"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="25"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="30"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="35"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="40"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="45"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="50"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="55"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="60"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="65"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="70"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="75"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="80"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="85"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="90"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="95"></li>
+                                <li><input type="radio" name="Clinical Knowledge" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 03 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            High School Chemistry
+                            College Computer Science
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic03-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="High School Chemistry" value="25"></li>
-                                <li><input type="radio" name="High School Chemistry" value="30"></li>
-                                <li><input type="radio" name="High School Chemistry" value="35"></li>
-                                <li><input type="radio" name="High School Chemistry" value="40"></li>
-                                <li><input type="radio" name="High School Chemistry" value="45"></li>
-                                <li><input type="radio" name="High School Chemistry" value="50"></li>
-                                <li><input type="radio" name="High School Chemistry" value="55"></li>
-                                <li><input type="radio" name="High School Chemistry" value="60"></li>
-                                <li><input type="radio" name="High School Chemistry" value="65"></li>
-                                <li><input type="radio" name="High School Chemistry" value="70"></li>
-                                <li><input type="radio" name="High School Chemistry" value="75"></li>
-                                <li><input type="radio" name="High School Chemistry" value="80"></li>
-                                <li><input type="radio" name="High School Chemistry" value="85"></li>
-                                <li><input type="radio" name="High School Chemistry" value="90"></li>
-                                <li><input type="radio" name="High School Chemistry" value="95"></li>
-                                <li><input type="radio" name="High School Chemistry" value="100"></li>
+                                <li><input type="radio" name="College Computer Science" value="25"></li>
+                                <li><input type="radio" name="College Computer Science" value="30"></li>
+                                <li><input type="radio" name="College Computer Science" value="35"></li>
+                                <li><input type="radio" name="College Computer Science" value="40"></li>
+                                <li><input type="radio" name="College Computer Science" value="45"></li>
+                                <li><input type="radio" name="College Computer Science" value="50"></li>
+                                <li><input type="radio" name="College Computer Science" value="55"></li>
+                                <li><input type="radio" name="College Computer Science" value="60"></li>
+                                <li><input type="radio" name="College Computer Science" value="65"></li>
+                                <li><input type="radio" name="College Computer Science" value="70"></li>
+                                <li><input type="radio" name="College Computer Science" value="75"></li>
+                                <li><input type="radio" name="College Computer Science" value="80"></li>
+                                <li><input type="radio" name="College Computer Science" value="85"></li>
+                                <li><input type="radio" name="College Computer Science" value="90"></li>
+                                <li><input type="radio" name="College Computer Science" value="95"></li>
+                                <li><input type="radio" name="College Computer Science" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 04 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            High School Macroeconomics
+                            Econometrics
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic04-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="High School Macroeconomics" value="25"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="30"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="35"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="40"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="45"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="50"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="55"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="60"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="65"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="70"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="75"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="80"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="85"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="90"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="95"></li>
-                                <li><input type="radio" name="High School Macroeconomics" value="100"></li>
+                                <li><input type="radio" name="Econometrics" value="25"></li>
+                                <li><input type="radio" name="Econometrics" value="30"></li>
+                                <li><input type="radio" name="Econometrics" value="35"></li>
+                                <li><input type="radio" name="Econometrics" value="40"></li>
+                                <li><input type="radio" name="Econometrics" value="45"></li>
+                                <li><input type="radio" name="Econometrics" value="50"></li>
+                                <li><input type="radio" name="Econometrics" value="55"></li>
+                                <li><input type="radio" name="Econometrics" value="60"></li>
+                                <li><input type="radio" name="Econometrics" value="65"></li>
+                                <li><input type="radio" name="Econometrics" value="70"></li>
+                                <li><input type="radio" name="Econometrics" value="75"></li>
+                                <li><input type="radio" name="Econometrics" value="80"></li>
+                                <li><input type="radio" name="Econometrics" value="85"></li>
+                                <li><input type="radio" name="Econometrics" value="90"></li>
+                                <li><input type="radio" name="Econometrics" value="95"></li>
+                                <li><input type="radio" name="Econometrics" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 05 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            High School Physics
+                            Electrical Engineering
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic05-likert-scale-radio-button-selection">
+                                <li><input type="radio" name="Electrical Engineering" value="25"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="30"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="35"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="40"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="45"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="50"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="55"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="60"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="65"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="70"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="75"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="80"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="85"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="90"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="95"></li>
+                                <li><input type="radio" name="Electrical Engineering" value="100"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Topic 06 -->
+                    <div class="row survey-likert-topic-container">
+                        <div class="col-2 survey-likert-topic-header">
+                            High School Physics
+                        </div>
+                        <div class="col-10 text-center survey-likert-legend-container">
+                            <ul class='likert-topic' id="survey-topic06-likert-scale-radio-button-selection">
                                 <li><input type="radio" name="High School Physics" value="25"></li>
                                 <li><input type="radio" name="High School Physics" value="30"></li>
                                 <li><input type="radio" name="High School Physics" value="35"></li>
@@ -237,32 +263,6 @@ conducted at the end of the experiment.
                                 <li><input type="radio" name="High School Physics" value="90"></li>
                                 <li><input type="radio" name="High School Physics" value="95"></li>
                                 <li><input type="radio" name="High School Physics" value="100"></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Topic 06 -->
-                    <div class="row survey-likert-topic-container">
-                        <div class="col-2 survey-likert-topic-header">
-                            High School World History
-                        </div>
-                        <div class="col-10 text-center survey-likert-legend-container">
-                            <ul class='likert-topic' id="survey-topic06-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="High School World History" value="25"></li>
-                                <li><input type="radio" name="High School World History" value="30"></li>
-                                <li><input type="radio" name="High School World History" value="35"></li>
-                                <li><input type="radio" name="High School World History" value="40"></li>
-                                <li><input type="radio" name="High School World History" value="45"></li>
-                                <li><input type="radio" name="High School World History" value="50"></li>
-                                <li><input type="radio" name="High School World History" value="55"></li>
-                                <li><input type="radio" name="High School World History" value="60"></li>
-                                <li><input type="radio" name="High School World History" value="65"></li>
-                                <li><input type="radio" name="High School World History" value="70"></li>
-                                <li><input type="radio" name="High School World History" value="75"></li>
-                                <li><input type="radio" name="High School World History" value="80"></li>
-                                <li><input type="radio" name="High School World History" value="85"></li>
-                                <li><input type="radio" name="High School World History" value="90"></li>
-                                <li><input type="radio" name="High School World History" value="95"></li>
-                                <li><input type="radio" name="High School World History" value="100"></li>
                             </ul>
                         </div>
                     </div>
@@ -295,78 +295,78 @@ conducted at the end of the experiment.
                     <!-- Topic 08 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            Phyilosophy
+                            Prehistory
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic08-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="Phyilosophy" value="25"></li>
-                                <li><input type="radio" name="Phyilosophy" value="30"></li>
-                                <li><input type="radio" name="Phyilosophy" value="35"></li>
-                                <li><input type="radio" name="Phyilosophy" value="40"></li>
-                                <li><input type="radio" name="Phyilosophy" value="45"></li>
-                                <li><input type="radio" name="Phyilosophy" value="50"></li>
-                                <li><input type="radio" name="Phyilosophy" value="55"></li>
-                                <li><input type="radio" name="Phyilosophy" value="60"></li>
-                                <li><input type="radio" name="Phyilosophy" value="65"></li>
-                                <li><input type="radio" name="Phyilosophy" value="70"></li>
-                                <li><input type="radio" name="Phyilosophy" value="75"></li>
-                                <li><input type="radio" name="Phyilosophy" value="80"></li>
-                                <li><input type="radio" name="Phyilosophy" value="85"></li>
-                                <li><input type="radio" name="Phyilosophy" value="90"></li>
-                                <li><input type="radio" name="Phyilosophy" value="95"></li>
-                                <li><input type="radio" name="Phyilosophy" value="100"></li>
+                                <li><input type="radio" name="Prehistory" value="25"></li>
+                                <li><input type="radio" name="Prehistory" value="30"></li>
+                                <li><input type="radio" name="Prehistory" value="35"></li>
+                                <li><input type="radio" name="Prehistory" value="40"></li>
+                                <li><input type="radio" name="Prehistory" value="45"></li>
+                                <li><input type="radio" name="Prehistory" value="50"></li>
+                                <li><input type="radio" name="Prehistory" value="55"></li>
+                                <li><input type="radio" name="Prehistory" value="60"></li>
+                                <li><input type="radio" name="Prehistory" value="65"></li>
+                                <li><input type="radio" name="Prehistory" value="70"></li>
+                                <li><input type="radio" name="Prehistory" value="75"></li>
+                                <li><input type="radio" name="Prehistory" value="80"></li>
+                                <li><input type="radio" name="Prehistory" value="85"></li>
+                                <li><input type="radio" name="Prehistory" value="90"></li>
+                                <li><input type="radio" name="Prehistory" value="95"></li>
+                                <li><input type="radio" name="Prehistory" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 09 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            Professional Psychology
+                            Professional Accounting
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic09-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="Professional Psychology" value="25"></li>
-                                <li><input type="radio" name="Professional Psychology" value="30"></li>
-                                <li><input type="radio" name="Professional Psychology" value="35"></li>
-                                <li><input type="radio" name="Professional Psychology" value="40"></li>
-                                <li><input type="radio" name="Professional Psychology" value="45"></li>
-                                <li><input type="radio" name="Professional Psychology" value="50"></li>
-                                <li><input type="radio" name="Professional Psychology" value="55"></li>
-                                <li><input type="radio" name="Professional Psychology" value="60"></li>
-                                <li><input type="radio" name="Professional Psychology" value="65"></li>
-                                <li><input type="radio" name="Professional Psychology" value="70"></li>
-                                <li><input type="radio" name="Professional Psychology" value="75"></li>
-                                <li><input type="radio" name="Professional Psychology" value="80"></li>
-                                <li><input type="radio" name="Professional Psychology" value="85"></li>
-                                <li><input type="radio" name="Professional Psychology" value="90"></li>
-                                <li><input type="radio" name="Professional Psychology" value="95"></li>
-                                <li><input type="radio" name="Professional Psychology" value="100"></li>
+                                <li><input type="radio" name="Professional Accounting" value="25"></li>
+                                <li><input type="radio" name="Professional Accounting" value="30"></li>
+                                <li><input type="radio" name="Professional Accounting" value="35"></li>
+                                <li><input type="radio" name="Professional Accounting" value="40"></li>
+                                <li><input type="radio" name="Professional Accounting" value="45"></li>
+                                <li><input type="radio" name="Professional Accounting" value="50"></li>
+                                <li><input type="radio" name="Professional Accounting" value="55"></li>
+                                <li><input type="radio" name="Professional Accounting" value="60"></li>
+                                <li><input type="radio" name="Professional Accounting" value="65"></li>
+                                <li><input type="radio" name="Professional Accounting" value="70"></li>
+                                <li><input type="radio" name="Professional Accounting" value="75"></li>
+                                <li><input type="radio" name="Professional Accounting" value="80"></li>
+                                <li><input type="radio" name="Professional Accounting" value="85"></li>
+                                <li><input type="radio" name="Professional Accounting" value="90"></li>
+                                <li><input type="radio" name="Professional Accounting" value="95"></li>
+                                <li><input type="radio" name="Professional Accounting" value="100"></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Topic 10 -->
                     <div class="row survey-likert-topic-container">
                         <div class="col-2 survey-likert-topic-header">
-                            Public Relations
+                            Professional Law
                         </div>
                         <div class="col-10 text-center survey-likert-legend-container">
                             <ul class='likert-topic' id="survey-topic10-likert-scale-radio-button-selection">
-                                <li><input type="radio" name="Public Relations" value="25"></li>
-                                <li><input type="radio" name="Public Relations" value="30"></li>
-                                <li><input type="radio" name="Public Relations" value="35"></li>
-                                <li><input type="radio" name="Public Relations" value="40"></li>
-                                <li><input type="radio" name="Public Relations" value="45"></li>
-                                <li><input type="radio" name="Public Relations" value="50"></li>
-                                <li><input type="radio" name="Public Relations" value="55"></li>
-                                <li><input type="radio" name="Public Relations" value="60"></li>
-                                <li><input type="radio" name="Public Relations" value="65"></li>
-                                <li><input type="radio" name="Public Relations" value="70"></li>
-                                <li><input type="radio" name="Public Relations" value="75"></li>
-                                <li><input type="radio" name="Public Relations" value="80"></li>
-                                <li><input type="radio" name="Public Relations" value="85"></li>
-                                <li><input type="radio" name="Public Relations" value="90"></li>
-                                <li><input type="radio" name="Public Relations" value="95"></li>
-                                <li><input type="radio" name="Public Relations" value="100"></li>
+                                <li><input type="radio" name="Professional Law" value="25"></li>
+                                <li><input type="radio" name="Professional Law" value="30"></li>
+                                <li><input type="radio" name="Professional Law" value="35"></li>
+                                <li><input type="radio" name="Professional Law" value="40"></li>
+                                <li><input type="radio" name="Professional Law" value="45"></li>
+                                <li><input type="radio" name="Professional Law" value="50"></li>
+                                <li><input type="radio" name="Professional Law" value="55"></li>
+                                <li><input type="radio" name="Professional Law" value="60"></li>
+                                <li><input type="radio" name="Professional Law" value="65"></li>
+                                <li><input type="radio" name="Professional Law" value="70"></li>
+                                <li><input type="radio" name="Professional Law" value="75"></li>
+                                <li><input type="radio" name="Professional Law" value="80"></li>
+                                <li><input type="radio" name="Professional Law" value="85"></li>
+                                <li><input type="radio" name="Professional Law" value="90"></li>
+                                <li><input type="radio" name="Professional Law" value="95"></li>
+                                <li><input type="radio" name="Professional Law" value="100"></li>
                             </ul>
                         </div>
                     </div>
