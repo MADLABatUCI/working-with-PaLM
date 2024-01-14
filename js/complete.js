@@ -31,6 +31,9 @@ import {
 // Database Path
 var COMPLETE_DB_PATH        = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/userFeedback';
 
+// Write to Database Metadata
+let path_meta = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/metadata/experimentCompleted';
+writeRealtimeDatabase(path_meta, true);
 
 /******************************************************************************
     RUN ON PAGE LOAD

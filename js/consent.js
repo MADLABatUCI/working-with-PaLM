@@ -213,6 +213,10 @@ $(document).ready(function (){
         let path = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/consentData';
         writeRealtimeDatabase(path, CONSENT_DATA);
 
+        // Write to Database Metadata
+        let path_meta = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/metadata/experimentCompleted';
+        writeRealtimeDatabase(path_meta, false);
+
         // Load Instructions
         $('#instructions-main-content').load("html/instructions.html");
     };
