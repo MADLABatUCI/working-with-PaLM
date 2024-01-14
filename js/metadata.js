@@ -22,8 +22,8 @@ var DEBUG = false;
 
 //      Experiment Name
 //var EXPERIMENT_NAME             = "Calibrating User Confidence in GPT";
-var EXPERIMENT_NAME             = "Working with ChatGPT"; //"Estimating Confidence : Question Answer Systems";
-var EXPERIMENT_DATABASE_NAME    = "working-with-chatgpt-concurrent-exp01_v17";
+var EXPERIMENT_NAME             = "Working with Google's PaLM"; //"Estimating Confidence : Question Answer Systems";
+var EXPERIMENT_DATABASE_NAME    = "working-with-chatgpt-concurrent-exp01-PaLM-v01";
 
 //      Section Headers
 var SECTION_TITLE_CONSENT_PAGE  = "Consent Page";

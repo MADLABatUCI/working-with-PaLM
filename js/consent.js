@@ -42,7 +42,7 @@ import {
             None! This needs to be modified by you!
 */
 var EXPERIMENT_SUMMARY = `
-Users of ChatGPT often report that the system is overconfident in its answers and will sometimes persuasively provide responses that are verifiably incorrect. This is in contrast to research in Artificial Intelligence which generally reports that the answers that ChatGPT provides are well-aligned, that is, if the model predicts its answer to be correct with a chance of 70% it typically is correct roughly that same percentage of the time. The goal of this research is to test methodologies designed to communicate the uncertainty of the model in its response, such that people have an accurate sense of the uncertainty in the models response and are thus not misled by outputs.
+Users of Large Language Models (LLM), such as ChatGPT or Google's PaLM, often report that the system is overconfident in its answers and will sometimes persuasively provide responses that are verifiably incorrect. This is in contrast to research in Artificial Intelligence which generally reports that the answers that an LLM provides are well-aligned, that is, if the model predicts its answer to be correct with a chance of 70% it typically is correct roughly that same percentage of the time. The goal of this research is to test methodologies designed to communicate the uncertainty of an LLM model in its response, such that people have an accurate sense of the uncertainty in the model's response and are thus not misled by outputs.
 `;
 
 /*
