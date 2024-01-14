@@ -256,8 +256,8 @@ mark {
 
 }
 #instruction-task-gpt-text-box-image {
-    background-color: rgb(25, 195, 125);
-    border-radius: 5px;
+    /*background-color: rgb(25, 195, 125);*/
+    /*border-radius: 5px;*/
     padding: 5px;
 }
 #instruction-task-gpt-text-box-explanation-container {

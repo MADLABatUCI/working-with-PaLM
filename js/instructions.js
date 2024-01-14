@@ -390,6 +390,8 @@ $(document).ready(function (){
             $('#instruction-example-task-container').attr("hidden", true);
         } else if (CURRENT_INSTRUCTION_PAGE == 2){
             $('#instruction-example-task-container').attr("hidden", false);
+            removeAllHighlighting();
+            restoreAllOpacity();
         } else if (CURRENT_INSTRUCTION_PAGE == 3){
             lowerOpacity();
             restoreOpacity("#instruction-task-question-container-topic");
