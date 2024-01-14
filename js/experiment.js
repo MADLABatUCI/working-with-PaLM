@@ -12,7 +12,7 @@ to conduct the experiment.
 */
 
 /*
-CHANGE TITLE TO "Working with ChatGPT"
+CHANGE TITLE TO "Working with PaLM"
 */
 
 /******************************************************************************
@@ -47,12 +47,12 @@ var TRIAL_START_TIME            = null;
 var TRIAL_CURRENT_TIME          = null;
 
 //      Task Selection
-var PROB_GPT_CORRECT            = null;
+var PROB_PaLM_CORRECT            = null;
 var SUBMIT_OWN_CLASSIFICATION   = false;
 var PARTICIPANT_OWN_SELECTION       = null;
 
 //      Timers
-var PROB_GPT_CORRECT_TIMER      = null;
+var PROB_PaLM_CORRECT_TIMER      = null;
 var PARTICIPANT_OWN_SELECT_TIMER    = null;
 
 //      Trial Information Variables
@@ -190,7 +190,7 @@ $(document).ready(function (){
                 - Topic
                 - Question
                 - Options
-                - GPT Explanation
+                - PaLM Explanation
         */
         if (! trial){
             EXPERIMENT_START_TIME = new Date();
@@ -215,7 +215,7 @@ $(document).ready(function (){
         $('#participant-trial-option-text-C').text(trialList[trial].C); 
         $('#participant-trial-option-text-D').text(trialList[trial].D); 
 
-        // Update GPT Explanation
+        // Update PaLM Explanation
         $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle1']);
 
         // Initialize all timers
@@ -249,7 +249,7 @@ $(document).ready(function (){
             Disable Options A, B, C, and D
 
             This needs to be done when participants are making
-            their assessment on how the probability GPT is
+            their assessment on how the probability PaLM is
             correct.
         */
         $('#participant-trial-option-A').prop('disabled', true);
@@ -309,16 +309,16 @@ $(document).ready(function (){
                 - Enable the "Submit" button
         */ 
         // Set Timer
-        PROB_GPT_CORRECT_TIMER = new Date();
+        PROB_PaLM_CORRECT_TIMER = new Date();
 
         // Set selection variable
-        PROB_GPT_CORRECT = $(this).val();
+        PROB_PaLM_CORRECT = $(this).val();
 
         // Enable "Submit" button
         $('#proceedMainexperiment').prop('disabled', false);
 
         if (DEBUG_EXPERIMENT_CONCURRENT) {
-            console.log("Radio Button Selected, GPT Prob :", PROB_GPT_CORRECT);
+            console.log("Radio Button Selected, PaLM Prob :", PROB_PaLM_CORRECT);
         }
     };
 
@@ -329,13 +329,13 @@ $(document).ready(function (){
         /*
             Move onto the next phase of the task.
 
-            After the initial probability selection of GPT correctness,
-            the participant will need to make their own decision with GPT
-            assistance. To do this we need to disable the GPT likert container
+            After the initial probability selection of PaLM correctness,
+            the participant will need to make their own decision with PaLM
+            assistance. To do this we need to disable the PaLM likert container
             and enable selection of options A, B, C, and D.
         */
         if (DEBUG_EXPERIMENT_CONCURRENT) {
-            console.log("Phase 1 (radio button clicked) :", PROB_GPT_CORRECT);
+            console.log("Phase 1 (radio button clicked) :", PROB_PaLM_CORRECT);
         }
 
         // Make the Opacity of the task-likert-scale-container 0.25
@@ -407,8 +407,8 @@ $(document).ready(function (){
                 "trialEndTime": Date().toString(),
                 "questionID": expTrialList[CURRENT_TASK - 1]['question_id'],
                 "questionIndex": shuffledParticipantTrials[CURRENT_TASK - 1],
-                "probGPTCorrect": PROB_GPT_CORRECT,
-                "probGPTCorrectTime": PROB_GPT_CORRECT_TIMER - TRIAL_START_TIME,
+                "probPaLMCorrect": PROB_PaLM_CORRECT,
+                "probPaLMCorrectTime": PROB_PaLM_CORRECT_TIMER - TRIAL_START_TIME,
                 "patOwnSelection": PARTICIPANT_OWN_SELECTION,
                 "patOwnSelectionTime": PARTICIPANT_OWN_SELECT_TIMER - TRIAL_CURRENT_TIME
             }
@@ -416,8 +416,8 @@ $(document).ready(function (){
 
         // At the very end, we want to reset some values for the next trial
         //  Reset participant selection to be NULL
-        PROB_GPT_CORRECT = null;
-        PROB_GPT_CORRECT_TIMER = null;
+        PROB_PaLM_CORRECT = null;
+        PROB_PaLM_CORRECT_TIMER = null;
         // Set the SUBMIT_OWN_CLASSIFICATION variable to False
         //  This ensures that the next time the submit button is
         //  pressed, the experiment will move onto phase 2.
@@ -487,14 +487,14 @@ $(document).ready(function (){
             Once the "Submit" button is clicked, you should then move onto the
             next task in the experiment. Since this is the concurrent paradigm
             (AI advice is always turned on), we will not move onto the next
-            trial right away. Rather, we will disable the "GPT prob correct"
+            trial right away. Rather, we will disable the "PaLM prob correct"
             aspect of the interface and have the participant select their own
-            answer to the question with the help of GPT. After they submit
+            answer to the question with the help of PaLM. After they submit
             their own answer, then they can move onto the next trial.
             
             Single Trial Phase:
 
-                1.a) Make a prob GPT is correct selection
+                1.a) Make a prob PaLM is correct selection
                 1.b) Click Submit
                 2.a) Make your own selection for an answer
                 2.b) Click Submit
