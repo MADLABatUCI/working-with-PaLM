@@ -216,7 +216,7 @@ $(document).ready(function (){
         $('#participant-trial-option-text-D').text(trialList[trial].D); 
 
         // Update PaLM Explanation
-        $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle1']);
+        $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle7']);
 
         // Initialize all timers
         TRIAL_START_TIME = new Date();
@@ -224,7 +224,7 @@ $(document).ready(function (){
         if (DEBUG_EXPERIMENT_CONCURRENT) {
             console.log(' Current Trial Number =', trial);
             console.log(' Current Trial Data   =', trialList[trial]);
-            console.log(' Current Explanation  =', trialList[trial]['explanationstyle1']);
+            console.log(' Current Explanation  =', trialList[trial]['explanationstyle7']);
         }
     };
 
