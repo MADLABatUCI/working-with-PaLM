@@ -36,7 +36,7 @@ import {
 //      Task Information
 var CURRENT_TASK                = 1;
 var TOTAL_TRIALS                = 40;
-var DATA_FILE                   = "data/explanations17_baseline_350_Dec08_withAns.json";
+var DATA_FILE                   = "data/explanations_PaLM_experiments01_and_02.json";
 
 //      Database Path
 var TRIAL_DB_PATH               = EXPERIMENT_DATABASE_NAME + '/participantData/' + firebaseUserId + '/trialData';
