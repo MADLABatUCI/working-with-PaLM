@@ -33,12 +33,12 @@ var DEBUG_SURVEY                    = DEBUG;
 
 //      Survey Information
 var TOPIC_ABILITY_DICT = {
-    "Business Ethics"           : null,
     "Clinical Knowledge"        : null,
     "College Computer Science"  : null,
     "Econometrics"              : null,
     "Electrical Engineering"    : null,
     "High School Physics"       : null,
+    "High School Statistics"    : null,
     "Machine Learning"          : null,
     "Prehistory"                : null,
     "Professional Accounting"   : null,

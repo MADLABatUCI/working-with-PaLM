@@ -138,14 +138,6 @@ Everything is in order as it appears in the HTML file (top to bottom).
     background-color: #5e4fa2;
 }
 /*  Input Radio Button Styling  */
-input[name="Business Ethics"] {
-    position:relative;
-    display: block;
-    margin: auto;
-    z-index: 1;
-    width: 100%;
-    height: 1.5em
-}
 input[name="Clinical Knowledge"] {
     position:relative;
     display: block;
@@ -179,6 +171,14 @@ input[name="Electrical Engineering"] {
     height: 1.5em
 }
 input[name="High School Physics"] {
+    position:relative;
+    display: block;
+    margin: auto;
+    z-index: 1;
+    width: 100%;
+    height: 1.5em
+}
+input[name="High School Statistics"] {
     position:relative;
     display: block;
     margin: auto;
