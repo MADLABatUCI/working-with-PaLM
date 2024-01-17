@@ -36,6 +36,7 @@ import {
 //      Task Information
 var CURRENT_TASK                = 1;
 var TOTAL_TRIALS                = 40;
+var EXPLANATION_OPTIONS         = 6;
 var DATA_FILE                   = "data/explanations_PaLM_experiments01_and_02_v03.json";
 
 //      Database Path
@@ -59,6 +60,7 @@ var PARTICIPANT_OWN_SELECT_TIMER    = null;
 var LOOKUP_TABLES = [];
 var expTrialList;
 var participantTrials = [];
+var explanationTrials = [];
 
 
 /******************************************************************************
@@ -74,6 +76,29 @@ if (DEBUG_EXPERIMENT_CONCURRENT){
     TOTAL_TRIALS = 5;
 };
 
+/******************************************************************************
+    FUNCTIONALITY
+
+        Functions to be called throughout the module.
+******************************************************************************/
+function shuffle(obj1, obj2) {
+    /*
+    Shuffle the given objects in the same way.
+    */
+    var index = obj1.length;
+    var rnd, tmp1, tmp2;
+
+    while (index) {
+        rnd = Math.floor(Math.random() * index);
+        index -= 1;
+        tmp1 = obj1[index];
+        tmp2 = obj2[index];
+        obj1[index] = obj1[rnd];
+        obj2[index] = obj2[rnd];
+        obj1[rnd] = tmp1;
+        obj2[rnd] = tmp2;
+    }
+};
 
 /******************************************************************************
     ORDERED FUNCTIONALITY
@@ -136,18 +161,38 @@ async function getParticipantTrialQuestions() {
             if (cbin==0) numQuestionsperbin = 5; // we have 5 questions per category in the first confidence bin (0.2-0.4)
             if (cbin>0) numQuestionsperbin = 10; // we have 10 questions per category in the remaining confidence bins (0.4-0.6; 0.6-0.8; 0.8-1.0)
 
-            let assignedQuestion = await blockRandomization(studyId, lookupTable, numQuestionsperbin,
+            // NOTE:
+            //  The condition count has now been increased form numQuestionsperbin to numQuestionsperbin * EXPLANATION_OPTIONS
+            //  This means that if there are 10 questions in a bin, there are a total of 40 conditions (each questions has 4 possible explanation options)
+            //  We will separate the questions and the explanation based on the condition assigned between 0-(numQuestionsperbin*EXPLANATION_OPTIONS - 1)
+            let assignedQuestion = await blockRandomization(studyId, lookupTable, numQuestionsperbin*EXPLANATION_OPTIONS,
                 maxCompletionTimeMinutes, numDraws); // the await keyword is mandatory
-            
-            if (DEBUG_EXPERIMENT_CONCURRENT){
-                console.log( "For category " + category + " and confidence bin " + cbin + " we assigned question #" + assignedQuestion + " from that bin and category");
-            };
+            // Convert the assignedQuestion to a number
+            assignedQuestion = parseInt(assignedQuestion);
+
+            // NOTE:
+            //  assignedQuestion will be broken down into two different numbers to determine the question and explanation
+            //
+            //  Explanation = assignedQuestion % EXPLANATION_OPTIONS
+            //
+            //  Question    = (assignedQuestion - Explanation) / EXPLANATION_OPTIONS
+
+            // Get the explanation that will be shown to the participant
+            let explanationToShow = assignedQuestion % EXPLANATION_OPTIONS;
+
+            // Get the question that will be shown to the participant
+            let questionToShow = (assignedQuestion - explanationToShow) / EXPLANATION_OPTIONS;
 
             // Now, go find which question this is from the list of questions and add to the list for this participant
             // The Topic_number and bin_wide_number are all in order
             // We just need to keep track of how far along we are and keep adding to our start index
-            participantTrials.push(startIndex + parseInt(assignedQuestion));
+            explanationTrials.push(explanationToShow);
+            participantTrials.push(startIndex + questionToShow);
             startIndex += numQuestionsperbin;
+
+            if (DEBUG_EXPERIMENT_CONCURRENT){
+                console.log( "For category " + category + " and confidence bin " + cbin + " we assigned question #" + questionToShow + " along with explanation #" + (explanationToShow + 1) + " from that bin and category");
+            };
 
             $('#expCountdown').text(TOTAL_TRIALS - participantTrials.length);
 
@@ -171,9 +216,13 @@ $(document).ready(function (){
     //  Show Experiment Trial Interface
     $('#mainexperiment-container').attr("hidden", false);
 
-    //  Get trials for this experiment!
-    let shuffledParticipantTrials = participantTrials.sort((a, b) => 0.5 - Math.random());
-    expTrialList = shuffledParticipantTrials.slice(0, TOTAL_TRIALS).map(i => trialQuestions[i]);
+    //  Shuffle trials for this experiment!
+    shuffle(participantTrials, explanationTrials);
+    expTrialList = participantTrials.slice(0, TOTAL_TRIALS).map(i => trialQuestions[i]);
+    if (DEBUG_EXPERIMENT_CONCURRENT){
+        console.log("Trials\n", participantTrials);
+        console.log("Explanation\n", explanationTrials);
+    };
 
 
     /******************************************************************************
@@ -181,7 +230,7 @@ $(document).ready(function (){
 
             All functions that will be used for the consent page.
     ******************************************************************************/
-    function presentTrial(trialList, trial) {
+    function presentTrial(trialList, explanationList, trial) {
         /*
             Function to display the current trial.
 
@@ -216,7 +265,7 @@ $(document).ready(function (){
         $('#participant-trial-option-text-D').text(trialList[trial].D); 
 
         // Update PaLM Explanation
-        $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle7']);
+        $('#task-gpt-text-box-explanation-text').html(trialList[trial]['explanationstyle' + (explanationList[trial] + 1)]);
 
         // Initialize all timers
         TRIAL_START_TIME = new Date();
@@ -224,7 +273,7 @@ $(document).ready(function (){
         if (DEBUG_EXPERIMENT_CONCURRENT) {
             console.log(' Current Trial Number =', trial);
             console.log(' Current Trial Data   =', trialList[trial]);
-            console.log(' Current Explanation  =', trialList[trial]['explanationstyle7']);
+            console.log(' Current Explanation  =', trialList[trial]['explanationstyle' + (explanationList[trial] + 1)]);
         }
     };
 
@@ -406,7 +455,8 @@ $(document).ready(function (){
                 "trialStartTime": TRIAL_START_TIME.toString(),
                 "trialEndTime": Date().toString(),
                 "questionID": expTrialList[CURRENT_TASK - 1]['question_id'],
-                "questionIndex": shuffledParticipantTrials[CURRENT_TASK - 1],
+                "questionIndex": participantTrials[CURRENT_TASK - 1],
+                "explanationStyle": explanationTrials[CURRENT_TASK - 1] + 1,
                 "probPaLMCorrect": PROB_PaLM_CORRECT,
                 "probPaLMCorrectTime": PROB_PaLM_CORRECT_TIMER - TRIAL_START_TIME,
                 "patOwnSelection": PARTICIPANT_OWN_SELECTION,
@@ -438,7 +488,7 @@ $(document).ready(function (){
 
         if (CURRENT_TASK <= TOTAL_TRIALS) {
             // Display the next trial
-            presentTrial(expTrialList, CURRENT_TASK - 1);
+            presentTrial(expTrialList, explanationTrials, CURRENT_TASK - 1);
         }
     };
 
@@ -518,7 +568,7 @@ $(document).ready(function (){
     $('#trialCounter-total').text(TOTAL_TRIALS.toString().padStart(2, '0'));
 
     //  Present the first image
-    presentTrial(expTrialList, CURRENT_TASK - 1);
+    presentTrial(expTrialList, explanationTrials, CURRENT_TASK - 1);
     
     //  Handle Likert Selection
     $('#task-likert-scale-radio-button-selection li input').click(likertRadioSelect);
