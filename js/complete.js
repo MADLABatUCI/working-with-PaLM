@@ -64,7 +64,7 @@ $(document).ready(function (){
             Redirect participants back to prolific after the study.
         */
         //   Redirect URL for Experiment 01 (first 10 participants)
-        window.location.replace("https://app.prolific.com/submissions/complete?cc=CEMSNU5M");
+        window.location.replace("https://app.prolific.com/submissions/complete?cc=C18Y79GU");
     }
 
     function submitFeedback() {
